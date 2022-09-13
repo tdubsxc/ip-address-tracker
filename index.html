@@ -4,10 +4,30 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon" />
     <title>IP Address Tracker</title>
   </head>
-  <body>
+  <body class="preload font-body text-gray-900 min-h-screen">
+    <div class="bg-banner">
+      <div class="container">
+        <div class="pt-10 space-y-6 text-center">
+          <h1 class="font-display font-bold text-3xl text-white sm:text-4xl lg:text-5xl">IP Address Tracker</h1>
+          <form action="#" class="flex max-w-xl mx-auto">
+            <input
+              type="text"
+              class="flex-1 px-2 py-3 rounded-tl-md rounded-bl-md text-sm md:text-base focus:shadow-md focus:outline-none focus:ring-2 focus:ring-offset-transparent focus:ring-offset-1"
+              placeholder="Search for any IP Addresses..."
+            />
+            <button
+              type="submit"
+              class="bg-black px-6 rounded-tr-md rounded-br-md focus:outline-none focus:ring-2 focus:ring-offset-transparent focus:ring-offset-1"
+            >
+              <img src="/assets/images/icon-arrow.svg" alt="Chevron form submit button" />
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

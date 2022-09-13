@@ -19,6 +19,10 @@
     @apply inline-block no-underline py-0.5 px-1 rounded font-body font-normal transition-colors focus:outline-none focus:ring-0 focus:ring-offset-transparent focus:ring-offset-1;
   }
 
+  .form-control {
+    @apply block h-full w-full px-1.5 py-3 font-normal bg-white border border-solid border-gray-100 appearance-none rounded transition focus:shadow-md focus:outline-none focus:ring-2 focus:ring-offset-transparent focus:ring-offset-1;
+  }
+
   .ps {
     @apply py-11 xs:py-12 sm:py-13 md:py-14 lg:py-15 xl:py-16;
   }
@@ -36,4 +40,10 @@
   -moz-transition: none !important;
   -ms-transition: none !important;
   -o-transition: none !important;
+}
+
+.bg-banner {
+  min-height: 32vh;
+  width: 100%;
+  background-image: linear-gradient(to top, rgb(69, 62, 153, 0.95), rgb(95, 133, 241)), url("/assets/images/wiggle.svg");
 }
