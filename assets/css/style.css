@@ -48,6 +48,7 @@
   max-height: 300px;
   width: 100%;
   background-image: linear-gradient(to top, rgb(69, 62, 153, 0.95), rgb(95, 133, 241)), url("/assets/images/wiggle.svg");
+  border-bottom: 4px solid #fff;
 }
 
 .ip-info {
@@ -95,6 +96,6 @@
   }
 
   .ip-item:not(:last-child) {
-    border-right: 2px solid rgb(207, 204, 204);
+    border-right: 2px solid #cfcccc;
   }
 }

@@ -1,5 +1,6 @@
 import L from "leaflet";
 
+const viewport = document.querySelector("meta[name=viewport]");
 const ipAddress = document.querySelector("#ip");
 const location = document.querySelector("#location");
 const timezone = document.querySelector("#timezone");
@@ -13,6 +14,8 @@ const geoUrl = `https://api.ipgeolocation.io/ipgeo?apiKey=${geoApiKey}`;
 
 window.addEventListener("DOMContentLoaded", () => {
   document.body.classList.remove("preload");
+  viewport.setAttribute("content", viewport.content + ", height=" + window.innerHeight);
+
   L.marker([37.42, -122.08]).addTo(map);
   mountMap();
 });
@@ -49,6 +52,7 @@ async function handleSubmit(e) {
 
     displayIpInfo(ipInfo);
   } catch (error) {
+    console.log(error);
     alert("Invalid entry. Please enter a valid IP address. An example: 8.8.8.8");
   } finally {
     input.value = "";
@@ -60,7 +64,7 @@ function generateIpInfo(data) {
     ip: data.ip,
     city: data.city,
     state: data.state_prov,
-    tz: data.time_zone.name.split("/")[1].replace("_", " "),
+    tz: data.time_zone.name.replace("_", " "),
     isp: data.isp.split("(")[0],
     lat: data.latitude,
     lng: data.longitude,
