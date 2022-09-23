@@ -12,7 +12,6 @@
       integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
       crossorigin=""
     />
-    <script type="module" src="/main.js" defer></script>
   </head>
   <body class="preload flex flex-col font-body h-screen max-h-screen text-gray-900">
     <div class="bg-banner">
@@ -37,7 +36,7 @@
       </div>
     </div>
     <div class="container">
-      <div class="relative max-w-5xl mx-auto">
+      <div class="relative max-w-5xl mx-auto sm:w-3/4 md:w-full">
         <div class="ip-info">
           <div class="ip-item">
             <h2 class="font-display font-medium text-xs uppercase tracking-widest text-slate-400">IP Address</h2>
@@ -59,5 +58,6 @@
       </div>
     </div>
     <div id="map" class="relative z-10 flex-1"></div>
+    <script type="module" src="/main.js"></script>
   </body>
 </html>
